@@ -22,14 +22,14 @@ public class BookUtil {
 		return result;
 	}
 	
-	public static List<Book> getAvailables(List<Book> books, String name){
+	public static List<Book> getAvailables(List<Book> books, String title){
 		List<Book> result = new ArrayList<Book>();
 		
 		for (Book book : books) {
 			if (book.isAvailable() == false)
 				continue;
 			
-			if (book.getTitle().contains(name))
+			if (book.getTitle().contains(title))
 				result.add(book);
 		}
 		
